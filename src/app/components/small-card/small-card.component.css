@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.small-card-title > h1 > a{
+  color: #100461;
+}
+
 .small-card-footer{
   margin-top: 10px;
 }

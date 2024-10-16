@@ -1,21 +1,26 @@
-<header>
-  <app-menu-bar></app-menu-bar>
-</header>
-
 <app-menu-title></app-menu-title>
 
 <div class="container-articles">
   <div class="articles-left">
-      <app-big-card picture="https://loremflickr.com/g/320/240/paris"
-                    title="Título do artigo"
-                    description="Descrição do artigo"></app-big-card>
+    @for (article of articles; track article; let first = $first) {
+      @if ( first ){
+        <app-big-card id="{{article.id}}"
+                      picture="{{article.picture}}"
+                      title="{{article.title}}"
+                      description="{{article.description}}"></app-big-card>
+      }
+    }
   </div>
   <div class="articles-right">
-    <app-small-card picture="https://loremflickr.com/320/240/paris,girl/all"
-                    title="Titulo do small card"></app-small-card>
-    <app-small-card picture="https://loremflickr.com/g/320/240/paris,girl/all"
-                    title="Titulo do small card 2"></app-small-card>
-    <app-small-card picture="https://loremflickr.com/320/240/brazil,rio"
-                    title="Titulo do small card 3"></app-small-card>
+    @for (article of articles; track article; let first = $first) {
+      @if ( !first ){
+        <app-small-card id="{{article.id}}"
+                        picture="{{article.picture}}"
+                        title="{{article.title}}"></app-small-card>
+      }
+    } @empty {
+      Il y a ne pas item.
+    }
   </div>
+
 </div>
