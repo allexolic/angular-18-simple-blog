@@ -6,7 +6,7 @@
 .menu-title-container > h1 {
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 100px;
+  font-size: 80px;
   font-family: adobe-garamond-pro,sans-serif;
   display: flex;
   justify-content: center;
@@ -16,4 +16,10 @@
 .menu-title-container > hr {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .menu-title-container > h1{
+    font-size: 50px;
+  }
 }

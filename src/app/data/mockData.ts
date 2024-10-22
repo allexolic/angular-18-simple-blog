@@ -18,7 +18,7 @@ export const mockData = [
     "picture": "https://loremflickr.com/g/320/240/paris,girl/all",
     "title": "Un bon place",
     "description": "Il y a bones parcs en France",
-    "full_text": "En France les parcs sont vertes"
+    "full_text": "En France les parcs sont vertes et les chiens peux marcher"
   },
   {
     "id": "4",
